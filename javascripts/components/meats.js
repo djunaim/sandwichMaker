@@ -23,6 +23,20 @@ const meatCollection = [
     },
 ]
 
+const getSelectedMeats = () => {
+    const selectedMeat = [];
+    const meatCheckboxes = document.getElementsByClassName('meat');
+    for (let j=0; j<meatCheckboxes.length; j++) {
+        for (let k=0; k<meatCollection.length; k++) {
+            if (meatCheckboxes[j].checked === true && meatCheckboxes[j].id === meatCollection[k].id) {
+                selectedMeat.push(meatCollection[k]);
+            }
+        }
+    }
+
+    return selectedMeat;
+}
+
 const meat = () => {
     let domString = '';
     for (let i=0; i<meatCollection.length; i++) {
@@ -37,4 +51,4 @@ const meat = () => {
     utilities.printToDOM('meatCounter', domString);
 }
 
-export default{ meat };
+export default{ meat, getSelectedMeats };
