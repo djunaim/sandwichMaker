@@ -16,11 +16,13 @@ const createFinalOrder = (items) => {
         prices.push(items[i].price);
         domString2 += `
         <div class="container toppings">
-            <div>
-                <p>${items[i].name}</p>
-            </div>
-            <div>
-                <p>$${((items[i].price)/100).toFixed(2)}</p>
+            <div class="row">
+                <div class="col d-flex justify-content-start">
+                    <p>${items[i].name}</p>
+                </div>
+                <div class="col d-flex justify-content-end">
+                    <p>$${((items[i].price)/100).toFixed(2)}</p>
+                </div>
             </div>
         </div>
         `    
