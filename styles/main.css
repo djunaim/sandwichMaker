@@ -1,7 +1,8 @@
 body {
     background-color: aliceblue;
 }
-/* 
-.container h1 {
-    text-align: center;
-} */
+
+.toppings {
+    display: flex;
+    justify-content: space-between;
+}

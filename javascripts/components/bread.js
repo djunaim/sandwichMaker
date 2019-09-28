@@ -20,6 +20,7 @@ const breadCollection = [
 
 const getSelectedBread = () => {
     const selectedBread = [];
+    console.log(selectedBread);
     const breadCheckboxes = document.getElementsByClassName('bread');
     for (let j=0; j<breadCheckboxes.length; j++) {
         for (let k=0; k<breadCollection.length; k++) {
